@@ -19,7 +19,7 @@ const EditStudentForm = () => {
 
   useEffect(() => {
     console.log("Trying to fetch student with id:", id);
-    axios.get(`https://student-management-system-backend-k8zu.onrender.com/api/students/${id}`)
+    axios.get(`https://studentmanagementsystem-backend-xfnw.onrender.com/api/students/${id}`)
       .then(res => {
         console.log("Student data fetched:", res.data);
         const fetchedStudent = res.data;
@@ -49,7 +49,7 @@ const EditStudentForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`https://student-management-system-backend-k8zu.onrender.com/api/students/${id}`, student)
+    axios.put(`https://studentmanagementsystem-backend-xfnw.onrender.com/api/students/${id}`, student)
       .then(() => {
         alert('Student updated successfully!');
         navigate('/students'); // redirect to student list
