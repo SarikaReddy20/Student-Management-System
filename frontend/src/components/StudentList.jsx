@@ -12,7 +12,7 @@ const StudentList = () => {
 
   const fetchStudents = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/students');
+      const res = await axios.get('https://student-management-system-backend-plie.onrender.com/api/students');
       setStudents(res.data);
     } catch (err) {
       console.error('Error fetching students:', err);
@@ -23,7 +23,7 @@ const StudentList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this student?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/students/${id}`);
+        await axios.delete(`https://student-management-system-backend-plie.onrender.com/api/students/${id}`);
         alert('Student deleted successfully!');
         fetchStudents(); // refresh list after deleting
       } catch (err) {
