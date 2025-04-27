@@ -20,7 +20,7 @@ const AddStudentForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.post('http://localhost:5000/api/students', student)
+    axios.post('https://student-management-system-backend-plie.onrender.com/api/students', student)
       .then(res => {
         alert('Student added successfully!');
         setStudent({
