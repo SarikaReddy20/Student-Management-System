@@ -20,7 +20,7 @@ const AddStudentForm = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    axios.post('https://student-management-system-backend-k8zu.onrender.com/api/students', student)
+    axios.post('https://studentmanagementsystem-backend-xfnw.onrender.com/api/students', student)
       .then(res => {
         alert('Student added successfully!');
         setStudent({
